@@ -1,0 +1,12 @@
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Praduemna112/NamdevTours.git
+git push -u origin main
+
+
+in the using contact us while i am using Emailjs 
+serviceId:service_d2tzp19
+templateId:template_nvyn0bf
+public key: 2w5y7-ykPIlQ-3UQk
