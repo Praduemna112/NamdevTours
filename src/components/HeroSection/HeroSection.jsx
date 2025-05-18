@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import videoFile from "../../assets/video.mp4";
@@ -38,16 +37,16 @@ const HeroSection = () => {
         "Craft unique adventures that belong to you and no one else.",
     },
   ];
-useEffect(() => {
-  const checkScreenSize = () => {
-    const width = window.innerWidth;
-    setIsLaptopView(width >= 1024); // Tailwind lg
-    setIsMobileView(width < 640);   // Tailwind sm
-  };
-  checkScreenSize();
-  window.addEventListener("resize", checkScreenSize);
-  return () => window.removeEventListener("resize", checkScreenSize);
-}, []);
+  useEffect(() => {
+    const checkScreenSize = () => {
+      const width = window.innerWidth;
+      setIsLaptopView(width >= 1024); // Tailwind lg
+      setIsMobileView(width < 640); // Tailwind sm
+    };
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
 
   // Check screen size on mount and resize
   useEffect(() => {
@@ -145,12 +144,11 @@ useEffect(() => {
           {currentContent.description}
         </p>
 
-     {(isLaptopView || isMobileView) && (
-  <div className="whitespace-normal md:whitespace-nowrap mt-4">
-    <TypeWriter />
-  </div>
-)}
-
+        {(isLaptopView || isMobileView) && (
+          <div className="whitespace-normal md:whitespace-nowrap mt-4">
+            <TypeWriter />
+          </div>
+        )}
 
         <Link to="/about" className="inline-block mt-8">
           <button className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white py-3 px-6 rounded-full text-base shadow-lg transition-transform hover:scale-105">

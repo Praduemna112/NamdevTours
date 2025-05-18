@@ -58,7 +58,7 @@ const Home = () => (
   <div>
     <HeroSection />
     <TravelGrid />
-    {/* <CounterPage /> */}
+    <CounterPage />
     {/* <Feacture /> */}
   </div>
 );
