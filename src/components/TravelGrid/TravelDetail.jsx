@@ -58,7 +58,7 @@ export default function TravelDetail() {
 
       {/* Tabs Navbar */}
       <nav
-        className="sticky top-0 z-10 bg-gray-300 border border-gray-300 rounded-none"
+        className="top-0 z-10 bg-gray-300 border border-gray-300 rounded-none"
         role="tablist"
         aria-label="Tour detail tabs"
       >
@@ -69,7 +69,7 @@ export default function TravelDetail() {
       gap-2 sm:gap-32 
       text-sm sm:text-base font-medium text-gray-700 
       p-2 sm:p-0 
-      max-h-60 overflow-y-auto sm:overflow-visible 
+      max-h-74 sm:overflow-visible 
       sm:max-h-none
     "
           style={{ WebkitOverflowScrolling: "touch" }} // smooth scrolling for iOS
