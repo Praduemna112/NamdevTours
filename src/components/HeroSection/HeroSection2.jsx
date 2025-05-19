@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import videoFile from "../../assets/video.mp4";
-import heroBg1 from "../../assets/gallery/herosection2.jpg";
+import heroBg1 from "../../assets/Gallery/HeroSection2.jpg";
 
 import TypeWriter from "./TypeWriter";
 import PlayButton from "./PlayButton";
