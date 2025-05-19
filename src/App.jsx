@@ -5,7 +5,9 @@ import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
 import HeroSection from "./components/HeroSection/HeroSection";
+import HeroSection2 from "./components/HeroSection/HeroSection2";
 import CounterPage from "./components/CounterPage/CounterPage";
+import FeacturePage from "./components/FeactureSection/FeacturePage";
 //import Feacture from "./components/FeactureSection/Feacture";
 import AboutUs from "./components/AboutUs/AboutUs";
 import Contact from "./components/Contact/Contact";
@@ -33,7 +35,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/travel/:id" element={<TravelDetail />} />
-          {/* <Route path="/about" element={<AboutUs />} /> */}
+          <Route path="/about" element={<AboutUs />} />
           {/* <Route path="/service" element={<Service />} /> */}
           {/* <Route path="/features" element={<Feacture />} /> */}
           
@@ -59,7 +61,10 @@ const Home = () => (
     <HeroSection />
     <TravelGrid />
     <CounterPage />
-    {/* <Feacture /> */}
+    <div className="my-12" /> 
+    <HeroSection2/>
+    {/* <FeacturePage /> */}
+    <FeacturePage/>
   </div>
 );
 
