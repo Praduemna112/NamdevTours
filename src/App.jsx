@@ -15,13 +15,14 @@ import Model from "./components/ModelView/Model";
 import EnquirePage from "./components/EnquirePage/EnquirePage";
 import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/ScrollToTop";
-import Service from "./components/Services/Service";
+
 import Privacy_Policy from "./components/Privacy_Policy/Privacy_Policy";
 import Terms_Conditions from "./components/Terms_&_Conditions/Terms_Conditions";
 import Return_Refund_Policy from "./components/Return_Refund_Policy/Return_Refund_Policy";
 import WhatsAppButton from "./components/WhatsAppButton/WhatsAppButton";
 import TravelGrid from "./components/TravelGrid/TravelGrid";
 import TravelDetail from "./components/TravelGrid/TravelDetail";
+import Destination from "./components/Destination/Destination";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -36,7 +37,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/travel/:id" element={<TravelDetail />} />
           <Route path="/about" element={<AboutUs />} />
-          {/* <Route path="/service" element={<Service />} /> */}
+          <Route path="/destination" element={<Destination />} />
           {/* <Route path="/features" element={<Feacture />} /> */}
           
           {/* <Route path="/contact" element={<Contact />} /> */}
