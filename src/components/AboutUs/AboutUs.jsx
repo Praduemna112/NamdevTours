@@ -63,7 +63,7 @@ const Aboutus = () => {
 
         {/* Right Text */}
         <div className="w-full md:w-1/2">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r text-orange-400 mb-1 pb-4 ">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r text-black mb-1 pb-4 ">
             About Our Agency
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-6">

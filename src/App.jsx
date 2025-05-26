@@ -3,7 +3,7 @@ import React from "react";
 import "./App.css";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
-import Navbar from "./components/Navbar/Navbar";
+import Navbar1 from "./components/Navbar/Navbar1";
 import HeroSection from "./components/HeroSection/HeroSection";
 import HeroSection2 from "./components/HeroSection/HeroSection2";
 import CounterPage from "./components/CounterPage/CounterPage";
@@ -22,7 +22,8 @@ import Return_Refund_Policy from "./components/Return_Refund_Policy/Return_Refun
 import WhatsAppButton from "./components/WhatsAppButton/WhatsAppButton";
 import TravelGrid from "./components/TravelGrid/TravelGrid";
 import TravelDetail from "./components/TravelGrid/TravelDetail";
-import Destination from "./components/Destination/Destination";
+
+import DestinationList from "./components/Destination/DestinationList";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -31,13 +32,13 @@ function App() {
     <Router>
       <ScrollToTop />
       <div className="App">
-        <Navbar />
+        <Navbar1 />
 
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/travel/:id" element={<TravelDetail />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/destination" element={<Destination />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/destination/destination-list" element={<DestinationList />} />
           {/* <Route path="/features" element={<Feacture />} /> */}
           
           {/* <Route path="/contact" element={<Contact />} /> */}

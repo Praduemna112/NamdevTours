@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useState } from "react";
+import img2 from "../../assets/photos/aboutus.jpg";
+import heroBg1 from "../../assets/photos/aboutus.jpg";
 
-const Destination = () => {
+import ImageGrid from "./images";
+
+const DestinationList = () => {
    const [bgIndex] = useState(0);
   
     const heroContent = [
       {
         image: heroBg1,
-        headline: "About Us",
+        headline: "Destination",
         subheading: "Discover the world, one journey at a time.",
         description:
           "Embrace tourism that connects cultures, nature, and unforgettable experiences.",
@@ -45,10 +49,10 @@ const Destination = () => {
           </p>
         </div>
       </div>
-      
-    
+      <div className="pb-20"></div>
+    <ImageGrid />
     </>
   )
 }
 
-export default Destination
+export default DestinationList

@@ -94,11 +94,12 @@ const HeroSection = () => {
   const currentContent = heroContent[bgIndex];
 
   return (
-    <div
-      id="hero"
-      className="relative w-full min-h-[70vh] sm:min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8
-        py-8 sm:py-16 md:py-20 transition-all duration-1000 ease-in-out overflow-hidden pt-[64px] sm:pt-0"
-    >
+   <div
+  id="hero"
+  className="relative w-full min-h-[70vh] sm:min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8
+    py-8 sm:py-16 md:py-20 transition-all duration-1000 ease-in-out overflow-visible pt-[64px] sm:pt-0 z-0"
+>
+
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-80 sm:opacity-70"
