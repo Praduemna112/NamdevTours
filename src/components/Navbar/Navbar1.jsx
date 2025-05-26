@@ -32,12 +32,8 @@ const Navbar = () => {
       <nav className="flex justify-between items-center px-4 py-3 md:px-6 lg:px-8 max-w-7xl mx-auto">
         <NavLink to="/" className="flex items-center space-x-3">
           <div className="text-white font-bold whitespace-nowrap">
-            <h1 className="text-xl block sm:hidden text-black">
-              Namdev Tours and Travels
-            </h1>
-            <h1 className="text-3xl hidden sm:block text-white">
-              Namdev Tours and Travels
-            </h1>
+            <h1 className="text-xl block sm:hidden text-black">xyz</h1>
+            <h1 className="text-3xl hidden sm:block text-white">xyz</h1>
           </div>
         </NavLink>
 
