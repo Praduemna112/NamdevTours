@@ -1,28 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa6";
+
+import heroBg1 from "../../assets/photos/aboutus.jpg";
 import { IoMail } from "react-icons/io5";
 import Email from "./Email";
 
 const Contact = () => {
+   const [bgIndex] = useState(0);
+  
+    const heroContent = [
+      {
+        image: heroBg1,
+        headline: "Contact",
+        subheading: "Discover the world, one journey at a time.",
+        description:
+          "Embrace tourism that connects cultures, nature, and unforgettable experiences.",
+      },
+    ];
+  
+    const currentContent = heroContent[bgIndex];
+  
   return (
     <div className="w-full font-medium">
-      {/* === HERO SECTION === */}
-      <section
+     {/* HERO SECTION */}
+      <div
         id="hero"
-        className="relative w-full min-h-[45vh] sm:min-h-[50vh] md:min-h-[60vh] bg-gradient-to-br from-pink-500 via-blue-400 to-yellow-400 flex flex-col items-center justify-center px-4"
+        className="relative w-full min-h-[50vh] sm:min-h-[75vh] md:min-h-[70vh] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-8 sm:py-16 md:py-10 transition-all duration-1000 ease-in-out overflow-hidden pt-[64px] sm:pt-0 "
       >
-        <div className="absolute inset-0 bg-black opacity-30" />
-        <div className="relative z-10 flex flex-col items-center text-center mt-32 sm:mt-36 md:mt-44 lg:mt-52 gap-y-6 sm:gap-y-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-lg">
-            We’d love to hear from you…
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-center bg-no-repeat bg-cover"
+          style={{
+            backgroundImage: `url(${currentContent.image})`,
+            zIndex: 0,
+            filter: "brightness(1)",
+          }}
+          aria-hidden="true"
+        />
+
+        {/* Text Content */}
+        <div className="relative z-30 max-w-xl text-center text-white mt-6 sm:mt-10 px-4 sm:px-6 md:px-8">
+          <h1 className="italic font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight drop-shadow-lg">
+            {currentContent.headline}
           </h1>
-          <p className="max-w-4xl text-base sm:text-lg md:text-xl text-white font-semibold px-2">
-            At PCB Technology, we offer a wide range of vending machine models,
-            allowing you to customize them to dispense a variety of products.
+          <h2 className="mt-3 text-lg sm:text-xl italic font-semibold drop-shadow-md">
+            {currentContent.subheading}
+          </h2>
+          <p className="mt-2 text-yellow-400 text-sm sm:text-base italic drop-shadow-md">
+            {currentContent.description}
           </p>
-          <div className="w-screen h-10 sm:h-14 md:h-20 bg-gradient-to-r from-orange-400 to-transparent rounded-tl-full rounded-tr-full" />
         </div>
-      </section>
+      </div>
+      <div className="mt-16" />
 
       <div>
         <Email />
@@ -65,30 +94,26 @@ const Contact = () => {
               <span>Customer Care Number:</span>
               <FaWhatsapp className="text-green-500" />
               <a
-                href="https://wa.me/918329987533?text=Let%20me%20know%20more%20details%20about%20PTM%20Machine"
+                href="https://wa.me/919898989898"
                 target="_blank"
                 className="text-black hover:text-orange-600 underline"
               >
-                +91 8329987533
+                +91 9898989898
               </a>
             </li>
             <li className="flex items-center gap-2">
               <span>Email:</span>
               <IoMail className="text-red-500" />
               <a
-                href="mailto:extrauserdata@gmail.com"
+                href="mailto:test@gmail.com"
                 target="_blank"
                 className="text-black hover:text-orange-600 underline"
               >
-                extrauserdata@gmail.com
+                test@gmail.com
               </a>
             </li>
           </ul>
 
-          <p className="mt-6 text-base sm:text-lg">
-            Connect with us and inquire about Smart Micro Retail Solutions for
-            your facility.
-          </p>
         </div>
 
         {/* Map Section */}

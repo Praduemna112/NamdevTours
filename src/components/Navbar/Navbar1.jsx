@@ -115,7 +115,7 @@ const Navbar = () => {
                 <li className="border-t border-gray-300 mx-2"></li>
                 <li>
                   <NavLink
-                    to="/destination/contact"
+                    to="/contact"
                     onClick={() => setDropdownOpen(false)}
                     className="block px-4 py-2 text-black hover:rounded-2xl hover:bg-gray-300"
                   >
