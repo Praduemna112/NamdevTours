@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import img2 from "../../assets/photos/aboutus.jpg";
 import heroBg1 from "../../assets/photos/aboutus.jpg";
 
-import ImageGrid from "./images";
+import ImageGrid from "./ImageGrid";
 
 const DestinationList = () => {
    const [bgIndex] = useState(0);
