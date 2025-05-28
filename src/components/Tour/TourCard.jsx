@@ -1,11 +1,17 @@
 import React from "react";
 
-const TourCard = ({ image, title, price,subtitle, description, day, age }) => {
+const TourCard = ({ image, title, price, subtitle, description, day, age }) => {
   return (
     <div className="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row p-4 md:p-6 gap-6">
       {/* Image */}
       <div className="w-full md:w-1/2">
-        <img src={image} alt={title} className="h-full w-full object-cover rounded-xl" />
+        {image ? (
+          <img
+            src={image}
+            alt={title}
+            className="h-full w-full object-cover rounded-xl"
+          />
+        ) : null}
       </div>
 
       {/* Info */}

@@ -1,20 +1,26 @@
 import React, { useState } from "react";
-import { FaRegAddressBook } from "react-icons/fa";
-import { IoBookOutline, IoLocationSharp } from "react-icons/io5";
-import { GrGallery } from "react-icons/gr";
+
+import { BsCalendar2DateFill } from "react-icons/bs";
+import { IoPricetag } from "react-icons/io5";
+import { FaSortAlphaDown } from "react-icons/fa";
 import heroBg1 from "../../assets/photos/aboutus.jpg";
 import TourCard from "./TourCard";
 import travelData from "../TravelGrid/TravelData"; // Make sure travelData is exported from its file
 
 const Tour = () => {
-  const tabs = ["date", "price low to high", "price high to low", "name a to z"];
+  const tabs = [
+    "date",
+    "price low to high",
+    "price high to low",
+    "name a to z",
+  ];
   const [activeTab, setActiveTab] = useState("date");
 
   const tabIcons = {
-    date: <FaRegAddressBook className="inline-block mr-2 w-5 h-5" />,
-    "price low to high": <IoBookOutline className="inline-block mr-2 w-5 h-5" />,
-    "price high to low": <IoLocationSharp className="inline-block mr-2 w-5 h-5" />,
-    "name a to z": <GrGallery className="inline-block mr-2 w-5 h-5" />,
+    date: <BsCalendar2DateFill className="inline-block mr-2 w-5 h-5" />,
+    "price low to high": <IoPricetag className="inline-block mr-2 w-5 h-5" />,
+    "price high to low": <IoPricetag className="inline-block mr-2 w-5 h-5" />,
+    "name a to z": <FaSortAlphaDown className="inline-block mr-2 w-5 h-5" />,
   };
 
   const getSortedData = () => {
@@ -47,10 +53,15 @@ const Tour = () => {
       >
         <div className="absolute inset-0 z-10" />
         <div className="relative z-20 text-center text-white max-w-3xl">
-          <h1 className="text-4xl sm:text-5xl font-bold italic drop-shadow-lg">Tours</h1>
-          <p className="mt-4 text-xl italic">Discover the world, one journey at a time.</p>
+          <h1 className="text-4xl sm:text-5xl font-bold italic drop-shadow-lg">
+            Tours
+          </h1>
+          <p className="mt-4 text-xl italic">
+            Discover the world, one journey at a time.
+          </p>
           <p className="mt-2 text-yellow-400 italic">
-            Embrace tourism that connects cultures, nature, and unforgettable experiences.
+            Embrace tourism that connects cultures, nature, and unforgettable
+            experiences.
           </p>
         </div>
       </div>
@@ -58,7 +69,7 @@ const Tour = () => {
       {/* TABS */}
       <nav className="top-0 z-10 bg-gray-300 border border-gray-300 rounded-none">
         <div
-          className="flex flex-col sm:flex-row sm:justify-center gap-2 sm:gap-32 text-sm sm:text-base font-medium text-gray-700 p-2 sm:p-0"
+          className="flex flex-col sm:flex-row sm:justify-center gap-4 sm:gap-32 text-sm sm:text-base font-medium text-gray-700 p-2 sm:p-0"
           style={{ WebkitOverflowScrolling: "touch" }}
         >
           {tabs.map((tab) => (
