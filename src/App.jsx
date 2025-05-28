@@ -27,6 +27,10 @@ import DestinationList from "./components/Destination/DestinationList";
 import OurTeam from "./components/Destination/OurTeam";
 import WhatWeOffer from "./components/Destination/WhatWeOffer";
 import Tour from "./components/Tour/Tour";
+import Gallery from "./components/Gallery/Gallery";
+import Place1 from "./components/Gallery/place1/place1";
+import Place2 from "./components/Gallery/place2/place2";
+import Place3 from "./components/Gallery/place3/place3";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -45,6 +49,10 @@ function App() {
           <Route path="/destination/our-team" element={<OurTeam />} />
           <Route path="/destination/what-we-offer" element={<WhatWeOffer />} />
           <Route path="/tours" element={<Tour />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/gallery/place1" element={<Place1 />} />
+          <Route path="/gallery/place2" element={<Place2 />} />
+          <Route path="/gallery/place3" element={<Place3 />} />
           {/* <Route path="/features" element={<Feacture />} /> */}
           
           <Route path="/contact" element={<Contact />} />

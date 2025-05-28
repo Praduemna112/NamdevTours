@@ -9,6 +9,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 const hoverGradient =
   "transition-colors duration-300 hover:text-orange-500";
 
+
 const Footer = () => {
   return (
     <footer className="bg-gray-100 py-8 px-4">
@@ -16,7 +17,7 @@ const Footer = () => {
         {/* Brand + Social */}
         <div className="col-span-1">
           <h2 className="text-2xl font-bold text-orange-600 mb-4">
-            Namdev Tours & Travels
+            xyz
           </h2>
           <p className="text-sm text-gray-700 mb-4">
             Explore the world with ease and comfort. We offer curated travel experiences tailored just for you.
@@ -42,10 +43,11 @@ const Footer = () => {
           <h3 className="font-bold mb-3 text-lg">Quick Links</h3>
           <ul className="space-y-2 text-sm">
             <li><Link to="/" className={hoverGradient}>Home</Link></li>
-            <li><Link to="/about" className={hoverGradient}>About Us</Link></li>
-            <li><Link to="/destinations" className={hoverGradient}>Destinations</Link></li>
+            <li><Link to="/aboutus" className={hoverGradient}>About Us</Link></li>
+            <li><Link to="/destination/destination-list" className={hoverGradient}>Destinations</Link></li>
             <li><Link to="/contact" className={hoverGradient}>Contact Us</Link></li>
-            <li><Link to="/enquiry" className={hoverGradient}>Enquiry</Link></li>
+            <li><Link to="/gallery" className={hoverGradient}>Gallery</Link></li>
+
           </ul>
         </div>
 
@@ -65,7 +67,7 @@ const Footer = () => {
         <div>
           <h3 className="font-bold mb-3 text-lg">Contact Us</h3>
           <p className="text-sm text-gray-700">
-            Namdev Tours & Travels,<br />
+             Tours & Travels,<br />
            
           </p>
           <a
@@ -76,13 +78,13 @@ const Footer = () => {
           >
             Get Directions <FaMapMarkerAlt className="ml-2 text-red-600" />
           </a>
-          <p className="mt-4 text-sm">Email: info@namdevtravels.com</p>
+          <p className="mt-4 text-sm">Email: info@toursandtravels.com</p>
           <p className="text-sm">Phone: +91 9898989898</p>
         </div>
       </div>
 
-      <div className="border-t border-gray-300 mt-8 pt-4 text-left text-sm text-gray-600 max-w-screen-xl mx-auto px-4">
-        © 2025 Namdev Tours & Travels. All rights reserved.
+      <div className="border-t border-gray-300 mt-8 pt-4  text-sm text-gray-600 max-w-screen-xl text-center mx-auto px-4">
+        © 2025  Tours & Travels. All rights reserved.
       </div>
     </footer>
   );
