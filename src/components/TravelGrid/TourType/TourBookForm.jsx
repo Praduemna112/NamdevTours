@@ -10,6 +10,7 @@ const BookTour = () => {
 
   const [isSending, setIsSending] = useState(false);
   const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
 
   // Controlled form data state
@@ -53,8 +54,15 @@ const BookTour = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setIsSending(true);
     setMessage("");
+    setError("");
+
+    if (!formData.interest) {
+      setError("Please select a tour before submitting.");
+      return;
+    }
+
+    setIsSending(true);
 
     const serviceID = "service_j619t7k";
     const ownerTemplateID = "template_pfve28s"; // For admin/owner
@@ -101,7 +109,6 @@ const BookTour = () => {
     <div className="lg:w-1/3 bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 h-fit top-24 mt-10 lg:mt-0">
       <h3 className="text-xl font-semibold mb-4 text-center">Enquire About Tour</h3>
       <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-4">
-
         {/* Hidden input to pass selected tour title */}
         <input type="hidden" name="interest" value={formData.interest} />
 
@@ -129,6 +136,7 @@ const BookTour = () => {
           placeholder="Phone Number"
           value={formData.user_phone}
           onChange={handleChange}
+          required
           className="border border-gray-300 rounded-lg p-2 text-sm"
         />
         <input
@@ -136,6 +144,7 @@ const BookTour = () => {
           name="booking_date"
           value={formData.booking_date}
           onChange={handleChange}
+          required
           className="border border-gray-300 rounded-lg p-2 text-sm"
         />
         <input
@@ -144,6 +153,7 @@ const BookTour = () => {
           placeholder="Number of people"
           value={formData.number}
           onChange={handleChange}
+          required
           className="border border-gray-300 rounded-lg p-2 text-sm"
         />
 
@@ -151,7 +161,9 @@ const BookTour = () => {
         <div className="mb-2 relative" ref={dropdownRef}>
           <label className="block text-gray-700 mb-1">Select Tour</label>
           <div
-            className="border border-gray-300 rounded p-2 text-sm bg-white cursor-pointer relative"
+            className={`border rounded p-2 text-sm bg-white cursor-pointer relative ${
+              error && !formData.interest ? "border-red-500" : "border-gray-300"
+            }`}
             onClick={() => setShowDropdown(!showDropdown)}
           >
             {formData.interest || "Select a tour"}
@@ -165,6 +177,7 @@ const BookTour = () => {
                   onClick={() => {
                     setFormData((prev) => ({ ...prev, interest: item.title }));
                     setShowDropdown(false);
+                    setError("");
                   }}
                 >
                   {item.title}
@@ -182,6 +195,8 @@ const BookTour = () => {
           onChange={handleChange}
           className="border border-gray-300 rounded-lg p-2 text-sm"
         ></textarea>
+
+        {error && <p className="text-sm text-center text-red-600">{error}</p>}
 
         <button
           type="submit"
