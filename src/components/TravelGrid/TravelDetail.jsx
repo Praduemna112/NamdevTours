@@ -66,9 +66,9 @@ export default function TravelDetail() {
           className="
       flex flex-col sm:flex-row 
       sm:justify-center 
-      gap-2 sm:gap-32 
+      gap-3 sm:gap-32 
       text-sm sm:text-base font-medium text-gray-700 
-      p-3 sm:p-0 
+      p-2 sm:p-0 
       max-h-74 sm:overflow-visible 
       sm:max-h-none
     "
