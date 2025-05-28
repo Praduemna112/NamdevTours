@@ -96,6 +96,7 @@ const Tour = () => {
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 md:grid-cols-2 gap-6">
         {getSortedData().map((tour) => (
           <TourCard
+          id={tour.id}
             key={tour.id}
             image={tour.image}
             title={tour.title}

@@ -8,22 +8,29 @@ const ImageGrid = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {travelData.map((item, index) => (
           <Link
-            to={`/travel/${item.id}`} // 👈 navigate to TravelDetail
+            to={`/travel/${item.id}`}
             key={item.id}
             className="relative overflow-hidden rounded-lg shadow-lg group"
           >
-            <img
-              src={item.image}
-              alt={`Destination ${index + 1}`}
-              className="w-full h-[500px] object-cover transform transition-all duration-500 group-hover:scale-105"
-            />
+            {/* Image or Placeholder */}
+            {item.image ? (
+              <img
+                src={item.image}
+                alt={`Destination ${index + 1}`}
+                className="w-full h-[500px] object-cover transform transition-all duration-500 group-hover:scale-105"
+              />
+            ) : (
+              <div className="w-full h-[500px] bg-gray-300 flex items-center justify-center text-gray-600 text-xl font-semibold">
+                No Image Available
+              </div>
+            )}
 
             {/* Title + Subtitle Centered */}
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 pointer-events-none">
-              <h2 className="text-white text-3xl font-bold bg-opacity-50 px-4 py-2 rounded">
+              <h2 className="text-white text-3xl font-bold px-4 py-2 rounded">
                 {item.title}
               </h2>
-              <p className="mt-2 text-white text-lg italic bg-opacity-30 px-3 py-1 rounded">
+              <p className="mt-2 text-white text-lg italic px-3 py-1 rounded">
                 {item.subtitle}
               </p>
             </div>
