@@ -26,6 +26,7 @@ import TravelDetail from "./components/TravelGrid/TravelDetail";
 import DestinationList from "./components/Destination/DestinationList";
 import OurTeam from "./components/Destination/OurTeam";
 import WhatWeOffer from "./components/Destination/WhatWeOffer";
+import Tour from "./components/Tour/Tour";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -43,6 +44,7 @@ function App() {
           <Route path="/destination/destination-list" element={<DestinationList />} />
           <Route path="/destination/our-team" element={<OurTeam />} />
           <Route path="/destination/what-we-offer" element={<WhatWeOffer />} />
+          <Route path="/tours" element={<Tour />} />
           {/* <Route path="/features" element={<Feacture />} /> */}
           
           <Route path="/contact" element={<Contact />} />

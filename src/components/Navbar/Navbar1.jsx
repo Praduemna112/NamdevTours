@@ -28,7 +28,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="w-full top-0 left-0 z-[100] transition-all duration-300 bg-orange-500">
+    <header className="fixed w-full top-0 left-0 z-[100] transition-all duration-300 bg-orange-500">
       <nav className="flex justify-between items-center px-4 py-3 md:px-6 lg:px-8 max-w-7xl mx-auto">
         <NavLink to="/" className="flex items-center space-x-3">
           <div className="text-white font-bold whitespace-nowrap">
