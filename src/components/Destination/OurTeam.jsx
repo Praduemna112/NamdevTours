@@ -1,5 +1,5 @@
 import React from "react";
-import heroBg1 from "../../assets/photos/aboutus.jpg";
+import heroBg1 from "../../assets/Gallery/our_team.jpg";
 import instagramIcon from "../../assets/Instagram_icon.png";
 import facebookIcon from "../../assets/Facebook_icon.png";
 import linkedinIcon from "../../assets/Linkedin_icon.png";
@@ -8,7 +8,7 @@ const teamMembers = [
   {
     name: "Alice Johnson",
     role: "Creative Director",
-    img: heroBg1,
+    img: "https://randomuser.me/api/portraits/women/44.jpg",
     desc: "Alice leads our creative vision and branding.",
     socials: {
       instagram: "https://instagram.com/alice",
@@ -19,7 +19,7 @@ const teamMembers = [
   {
     name: "Bob Smith",
     role: "Travel Consultant",
-    img: heroBg1,
+    img: "https://randomuser.me/api/portraits/men/32.jpg",
     desc: "Bob crafts unforgettable travel experiences.",
     socials: {
       instagram: "https://instagram.com/bob",
@@ -30,7 +30,7 @@ const teamMembers = [
   {
     name: "Clara Lee",
     role: "Marketing Manager",
-    img: heroBg1,
+    img: "https://randomuser.me/api/portraits/women/65.jpg",
     desc: "Clara handles all our outreach and campaigns.",
     socials: {
       instagram: "https://instagram.com/clara",
@@ -41,7 +41,7 @@ const teamMembers = [
   {
     name: "David Kumar",
     role: "Operations Head",
-    img: heroBg1,
+    img: "https://randomuser.me/api/portraits/men/41.jpg",
     desc: "David ensures seamless travel operations.",
     socials: {
       instagram: "https://instagram.com/david",
@@ -52,7 +52,7 @@ const teamMembers = [
   {
     name: "Emily Zhang",
     role: "Content Strategist",
-    img: heroBg1,
+    img: "https://randomuser.me/api/portraits/women/12.jpg",
     desc: "Emily curates content that inspires journeys.",
     socials: {
       instagram: "https://instagram.com/emily",
@@ -61,6 +61,7 @@ const teamMembers = [
     },
   },
 ];
+
 
 const OurTeam = () => {
   return (

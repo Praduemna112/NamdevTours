@@ -1,14 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import heroBg1 from "../../assets/photos/aboutus.jpg";
-import gallery1 from "../../assets/photos/aboutus.jpg";
-import gallery2 from "../../assets/photos/aboutus.jpg";
-import gallery3 from "../../assets/photos/aboutus.jpg";
+import heroBg1 from "../../assets/Gallery/gallery_image.jpg";
+import gallery1 from "../../assets/Gallery/gallery/mumbai/mumbai.jpg";
+import gallery2 from "../../assets/Gallery/gallery/manali/manali.jpg";
+import gallery3 from "../../assets/Gallery/gallery/goa/goa.jpg";
 
 const galleryImages = [
-  { src: gallery1, alt: "Gallery Image 1", route: "/gallery/place1" },
-    { src: gallery1, alt: "Gallery Image 2", route: "/gallery/place2" },
-   { src: gallery1, alt: "Gallery Image 3", route: "/gallery/place3" },
+  { src: gallery1, alt: "Gallery Image 1", title: "Mumbai", route: "/gallery/place1" },
+  { src: gallery2, alt: "Gallery Image 2", title: "Manali", route: "/gallery/place2" },
+  { src: gallery3, alt: "Gallery Image 3", title: "Goa", route: "/gallery/place3" },
 ];
 
 const Gallery = () => {
@@ -46,14 +46,18 @@ const Gallery = () => {
           {galleryImages.map((image, index) => (
             <div
               key={index}
-              className="overflow-hidden rounded-2xl shadow-lg cursor-pointer"
+              className="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer group"
               onClick={() => handleImageClick(image)}
             >
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+                className="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-300"
               />
+              {/* Overlay Title */}
+              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-2 px-4">
+                <h3 className="text-lg font-semibold">{image.title}</h3>
+              </div>
             </div>
           ))}
         </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import img2 from "../../assets/photos/aboutus.jpg";
-import heroBg1 from "../../assets/photos/aboutus.jpg";
+import heroBg1 from "../../assets/Gallery/destination_image.jpg";
 
 import ImageGrid from "./ImageGrid";
 

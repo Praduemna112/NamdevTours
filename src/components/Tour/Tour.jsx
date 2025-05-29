@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { BsCalendar2DateFill } from "react-icons/bs";
 import { IoPricetag } from "react-icons/io5";
 import { FaSortAlphaDown } from "react-icons/fa";
-import heroBg1 from "../../assets/photos/aboutus.jpg";
+import heroBg1 from "../../assets/Gallery/tour_image.jpg";
 import TourCard from "./TourCard";
 import travelData from "../TravelGrid/TravelData"; // Make sure travelData is exported from its file
 

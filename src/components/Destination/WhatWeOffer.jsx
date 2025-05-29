@@ -1,5 +1,5 @@
 import React from "react";
-import heroBg1 from "../../assets/photos/aboutus.jpg";
+import heroBg1 from "../../assets/Gallery/WhatWeOffer_image.jpg";
 import FeacturePage from "../FeactureSection/FeacturePage";
 import HeroSection2 from "../HeroSection/HeroSection2";
 

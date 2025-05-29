@@ -108,7 +108,7 @@ const HeroSection = () => {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/70" style={{ zIndex: 1 }} />
+      <div className="absolute inset-0 bg-black/50" style={{ zIndex: 1 }} />
 
       {/* Arrows */}
       <button
@@ -151,7 +151,7 @@ const HeroSection = () => {
           </div>
         )}
 
-        <Link to="/about" className="inline-block mt-8">
+        <Link to="/aboutus" className="inline-block mt-8">
           <button className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white py-3 px-6 rounded-full text-base shadow-lg transition-transform hover:scale-105">
             Know More
           </button>

@@ -1,32 +1,34 @@
 import React, { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa6";
 
-import heroBg1 from "../../assets/photos/aboutus.jpg";
+import heroBg1 from "../../assets/Gallery/contact_image.jpg";
 import { IoMail } from "react-icons/io5";
 import Email from "./Email";
+import TourBookForm from "../TravelGrid/TourType/TourBookForm"; // Import the TourBookForm component from its file
 
 const Contact = () => {
-   const [bgIndex] = useState(0);
-  
-    const heroContent = [
-      {
-        image: heroBg1,
-        headline: "Contact",
-        subheading: "Discover the world, one journey at a time.",
-        description:
-          "Embrace tourism that connects cultures, nature, and unforgettable experiences.",
-      },
-    ];
-  
-    const currentContent = heroContent[bgIndex];
-  
+  const [bgIndex] = useState(0);
+
+  const heroContent = [
+    {
+      image: heroBg1,
+      headline: "Contact",
+      subheading: "Discover the world, one journey at a time.",
+      description:
+        "Embrace tourism that connects cultures, nature, and unforgettable experiences.",
+    },
+  ];
+
+  const currentContent = heroContent[bgIndex];
+
   return (
     <div className="w-full font-medium">
-     {/* HERO SECTION */}
+      {/* HERO SECTION */}
       <div
-        id="hero"
-        className="relative w-full min-h-[50vh] sm:min-h-[75vh] md:min-h-[70vh] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-8 sm:py-16 md:py-10 transition-all duration-1000 ease-in-out overflow-hidden pt-[64px] sm:pt-0 "
-      >
+  id="hero"
+  className="relative w-full min-h-[60vh] sm:min-h-[80vh] md:min-h-[85vh] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-10 sm:py-20 md:py-24 transition-all duration-1000 ease-in-out overflow-hidden"
+>
+
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-center bg-no-repeat bg-cover"
@@ -34,6 +36,7 @@ const Contact = () => {
             backgroundImage: `url(${currentContent.image})`,
             zIndex: 0,
             filter: "brightness(1)",
+              backgroundPosition: "center 10%",
           }}
           aria-hidden="true"
         />
@@ -53,9 +56,13 @@ const Contact = () => {
       </div>
       <div className="mt-16" />
 
-      <div>
-        <Email />
-      </div>
+      <div className="flex justify-center items-center px-4 py-10  bg-center">
+ 
+    <TourBookForm />
+  
+</div>
+
+
       {/* Google Form
       <div className="px-10 sm:px-10 mt-12">
         <iframe
@@ -113,7 +120,6 @@ const Contact = () => {
               </a>
             </li>
           </ul>
-
         </div>
 
         {/* Map Section */}

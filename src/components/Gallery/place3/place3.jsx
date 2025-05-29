@@ -1,24 +1,17 @@
 import React from "react";
-import mount from "../../../assets/Gallery/mount.jpeg";
+import mount from "../../../assets/Gallery/gallery/goa/goa.jpg";
 
 // Sample images for place 1
-import placeImg1 from "../../../assets/photos/aboutus.jpg";
-import placeImg2 from "../../../assets/photos/aboutus.jpg";
-import placeImg3 from "../../../assets/photos/aboutus.jpg";
-import placeImg4 from "../../../assets/photos/aboutus.jpg";
-import placeImg5 from "../../../assets/photos/aboutus.jpg";
+import placeImg1 from "../../../assets/Gallery/gallery/goa/image1.jpg";
+import placeImg2 from "../../../assets/Gallery/gallery/goa/image1.jpg";
+import placeImg3 from "../../../assets/Gallery/gallery/goa/image1.jpg";
+
 
 const placeImages = [
   { src: placeImg1, alt: "Place 1 - Image 1" },
   { src: placeImg2, alt: "Place 1 - Image 2" },
   { src: placeImg3, alt: "Place 1 - Image 3" },
-  { src: placeImg4, alt: "Place 1 - Image 4" },
-  { src: placeImg5, alt: "Place 1 - Image 5" },
-  { src: placeImg1, alt: "Place 1 - Image 6" },
-  { src: placeImg2, alt: "Place 1 - Image 7" },
-  { src: placeImg3, alt: "Place 1 - Image 8" },
-  { src: placeImg4, alt: "Place 1 - Image 9" },
-  { src: placeImg5, alt: "Place 1 - Image 10" },
+
 ];
 
 const Place3 = () => {
@@ -33,7 +26,7 @@ const Place3 = () => {
       {/* Main Content */}
       <div className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h1 className="text-4xl md:text-5xl font-bold text-white">Place 3</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white">Goa</h1>
           <p className="text-gray-200 mt-2 text-sm md:text-base">
             More pictures from this destination.
           </p>
