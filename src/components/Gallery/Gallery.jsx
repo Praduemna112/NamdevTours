@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import heroBg1 from "../../assets/Gallery/gallery_image.jpg";
+import heroBg1 from "../../assets/Gallery/Gallery_image.jpg";
 import gallery1 from "../../assets/Gallery/gallery/mumbai/mumbai.jpg";
 import gallery2 from "../../assets/Gallery/gallery/manali/manali.jpg";
 import gallery3 from "../../assets/Gallery/gallery/goa/goa.jpg";
