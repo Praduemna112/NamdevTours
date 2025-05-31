@@ -7,7 +7,7 @@ import maldives from "../../assets/Gallery/maldives.jpeg";
 import resting from "../../assets/Gallery/resting.jpeg";
 
 const travelData = [
-  {
+  { // 
     id: 1,
     title: "Thailand",
     subtitle: "Beach in February",
